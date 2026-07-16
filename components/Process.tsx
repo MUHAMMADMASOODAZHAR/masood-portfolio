@@ -63,7 +63,7 @@ export default function Process() {
 
         {/* Process Steps Grid */}
         {/* Desktop: 3 columns, 2 rows (3x2). Tablet: 2 columns. Mobile: 1 column */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {steps.map((step, idx) => (
             <motion.div
               key={idx}

@@ -78,7 +78,7 @@ export default function FAQ() {
                   id={`faq-btn-${idx}`}
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-650 hover:bg-slate-100/50 dark:hover:bg-slate-800/40 transition-colors duration-300 cursor-pointer"
                 >
-                  <span className="font-bold text-slate-900 dark:text-white text-sm md:text-base leading-snug pr-4">
+                  <span className="font-bold text-slate-900 dark:text-white text-[15px] sm:text-base leading-snug pr-4">
                     {faq.question}
                   </span>
                   <div className="w-8 h-8 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shrink-0 border border-slate-200/60 dark:border-slate-700/60 text-slate-600 dark:text-slate-400">

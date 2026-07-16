@@ -50,7 +50,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid (Stacked on Mobile, Grid on Desktop) */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {reviews.map((review, idx) => (
             <motion.div
               key={idx}

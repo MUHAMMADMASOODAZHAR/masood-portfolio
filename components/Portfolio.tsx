@@ -88,7 +88,7 @@ export default function Portfolio() {
         </div>
 
         {/* Responsive Case Studies Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {caseStudies.map((study, idx) => (
             <motion.div
               key={idx}

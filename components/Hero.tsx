@@ -87,7 +87,7 @@ export default function Hero() {
               <br className="hidden xl:block" />{" "}
               <span className="text-blue-600 dark:text-blue-400 whitespace-nowrap">Ad Systems</span> That Turn Leads
               <br className="hidden xl:block" />{" "}
-              Into <span className="text-blue-600 dark:text-blue-400 whitespace-nowrap">Booked Appointments</span>
+              Into&nbsp;<span className="text-blue-600 dark:text-blue-400 whitespace-nowrap">Booked Appointments</span>
             </motion.h1>
 
             {/* Supporting Paragraph */}
@@ -101,7 +101,7 @@ export default function Hero() {
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3.5 mt-[28px] w-full">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-3.5 mt-[28px] w-full">
               <Button
                 onClick={() => {
                   const element = document.getElementById("contact");
@@ -134,7 +134,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="lg:col-span-5 relative w-full h-[450px] flex items-center justify-center lg:justify-end"
+            className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[450px] flex items-center justify-center lg:justify-end"
           >
             <motion.div 
               animate={{ y: [0, -5, 0] }}
@@ -198,7 +198,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-              className="absolute top-6 -left-6 md:-left-10 z-20 w-[190px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg flex flex-col gap-1.5"
+              className="hidden sm:flex absolute top-6 -left-6 md:-left-10 z-20 w-[190px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg flex-col gap-1.5"
             >
               <div className="flex items-center justify-between">
                 <span className="text-[9px] font-bold uppercase tracking-wider bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded-md border border-blue-100 dark:border-blue-900/30">
@@ -216,7 +216,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-              className="absolute -bottom-6 -right-6 z-20 w-[180px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg flex items-center gap-2.5"
+              className="hidden sm:flex absolute -bottom-6 -right-6 z-20 w-[180px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg items-center gap-2.5"
             >
               <div className="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shrink-0">
                 <CalendarCheck2 className="w-4 h-4" />

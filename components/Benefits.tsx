@@ -56,7 +56,7 @@ export default function Benefits() {
         </div>
 
         {/* Benefits Grid (6 cards max) */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefitsList.map((item, idx) => (
             <motion.div
               key={idx}

@@ -71,7 +71,7 @@ export default function About() {
           {/* Order 3 on mobile, Col 1-2 on desktop spanning rows 1 to 2 */}
           <div className="lg:col-start-1 lg:col-span-2 lg:row-start-1 lg:row-span-2 order-3 w-full flex items-center justify-center lg:pr-4">
             {/* Portrait Card Container */}
-            <div className="relative w-full max-w-[380px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-md border border-slate-200 dark:border-slate-850 group bg-slate-100 dark:bg-slate-900">
+            <div className="relative w-full max-w-[320px] xs:max-w-[380px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-md border border-slate-200 dark:border-slate-850 group bg-slate-100 dark:bg-slate-900 mx-auto">
               
               {/* Main Portrait Image */}
               <Image
@@ -144,7 +144,7 @@ export default function About() {
                   <span className="text-[26px] sm:text-[30px] lg:text-[28px] xl:text-[32px] font-bold text-slate-950 dark:text-white leading-tight">
                     {stat.value}
                   </span>
-                  <span className="text-[12px] lg:text-[13px] text-slate-505 dark:text-slate-405 font-medium mt-0.5 leading-tight">
+                  <span className="text-[13px] sm:text-[14px] lg:text-[13px] text-slate-600 dark:text-slate-400 font-medium mt-0.5 leading-tight">
                     {stat.label}
                   </span>
                 </div>
