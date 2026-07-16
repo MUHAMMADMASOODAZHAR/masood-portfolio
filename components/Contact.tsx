@@ -309,12 +309,12 @@ export default function Contact() {
                 </Button>
 
                 {/* Alternative Direct Booking */}
-                <div className="text-center pt-2">
+                <div className="text-center pt-2 flex justify-center">
                   <a 
                     href="https://calendly.com" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className={cn(buttonVariants({ variant: "link" }), "text-xs cursor-pointer inline-flex items-center gap-1.5")}
+                    className={cn(buttonVariants({ variant: "link" }), "text-xs cursor-pointer inline-flex flex-wrap items-center justify-center gap-1.5 whitespace-normal text-center max-w-full px-4")}
                   >
                     Prefer to choose a time directly? View my calendar →
                   </a>

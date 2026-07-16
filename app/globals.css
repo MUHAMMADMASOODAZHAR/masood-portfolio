@@ -122,8 +122,23 @@ section[id] {
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   * {
     @apply border-border outline-ring/50;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
   }
 
   html {
@@ -137,6 +152,15 @@ section[id] {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  iframe {
+    max-width: 100%;
+    height: auto;
   }
 
   /* Reset browser list styling defaults that could cause list markers */

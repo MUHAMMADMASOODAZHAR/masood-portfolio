@@ -260,10 +260,10 @@ export default function Tools() {
               element?.scrollIntoView({ behavior: "smooth" });
             }}
             variant="link"
-            className="cursor-pointer inline-flex items-center gap-1.5 text-sm font-medium hover:underline text-blue-600"
+            className="cursor-pointer inline-flex flex-wrap items-center justify-center gap-1.5 text-sm font-medium hover:underline text-blue-600 whitespace-normal text-center max-w-full px-4"
           >
             <span>Need a custom integration? Discuss Your Workflow</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/button:translate-x-0.5" />
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/button:translate-x-0.5 shrink-0" />
           </Button>
         </div>
 
