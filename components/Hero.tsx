@@ -72,28 +72,28 @@ export default function Hero() {
             {/* Badge */}
             <motion.div 
               variants={itemVariants} 
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/40 border border-blue-100/60 dark:border-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wide uppercase shadow-sm"
+              className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/40 border border-blue-100/60 dark:border-blue-900/30 text-blue-600 dark:text-blue-400 text-[11px] sm:text-xs font-bold tracking-wide uppercase shadow-sm max-w-full"
             >
-              <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 animate-pulse" />
+              <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 animate-pulse shrink-0" />
               <span>GHL Setup • AI Agents • CRM Systems</span>
             </motion.div>
 
             {/* Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-[36px] md:text-[44px] lg:text-[48px] xl:text-[54px] font-bold text-slate-900 dark:text-white leading-[1.08] tracking-[-0.025em] max-w-[780px] xl:max-w-[840px]"
+              className="text-[clamp(32px,8vw,40px)] md:text-[44px] lg:text-[48px] xl:text-[54px] font-bold text-slate-900 dark:text-white leading-[1.08] tracking-[-0.025em] max-w-[780px] xl:max-w-[840px] w-full"
             >
               GoHighLevel, AI Agents &
               <br className="hidden xl:block" />{" "}
-              <span className="text-blue-600 dark:text-blue-400 whitespace-nowrap">Ad Systems</span> That Turn Leads
+              <span className="text-blue-600 dark:text-blue-400">Ad Systems</span> That Turn Leads
               <br className="hidden xl:block" />{" "}
-              Into&nbsp;<span className="text-blue-600 dark:text-blue-400 whitespace-nowrap">Booked Appointments</span>
+              Into&nbsp;<span className="text-blue-600 dark:text-blue-400">Booked Appointments</span>
             </motion.h1>
 
             {/* Supporting Paragraph */}
             <motion.p
               variants={itemVariants}
-              className="text-base lg:text-[17px] text-slate-650 dark:text-slate-350 max-w-[620px] leading-[1.65] font-normal"
+              className="text-base lg:text-[17px] text-slate-650 dark:text-slate-350 max-w-[620px] w-full leading-[1.65] font-normal"
             >
               I build custom systems for service businesses: automating lead capturing pipelines, 
               qualifying prospects with conversational AI text/voice agents, and running closed-loop Meta 
@@ -134,12 +134,12 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[450px] flex items-center justify-center lg:justify-end"
+            className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[450px] flex items-center justify-center lg:justify-end overflow-hidden px-4 sm:px-0"
           >
             <motion.div 
               animate={{ y: [0, -5, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="w-full max-w-[400px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-[0_15px_40px_rgba(148,163,184,0.12)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.35)] p-6 relative z-10"
+              className="w-full max-w-[400px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-[0_15px_40px_rgba(148,163,184,0.12)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.35)] p-4 sm:p-6 relative z-10"
             >
               {/* OSX-style Top Bar controls */}
               <div className="flex gap-1.5 mb-5 items-center">
@@ -152,15 +152,15 @@ export default function Hero() {
               </div>
 
               {/* Stats overview */}
-              <div className="grid grid-cols-2 gap-3.5 mb-5">
-                <div className="bg-slate-50 dark:bg-slate-850 p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
+              <div className="grid grid-cols-2 gap-3 sm:gap-3.5 mb-5">
+                <div className="bg-slate-50 dark:bg-slate-850 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
                   <div className="text-slate-400 text-[10px] uppercase font-extrabold tracking-wider">
                     New Leads
                   </div>
                   <div className="text-xl font-black text-slate-900 dark:text-white mt-1">482</div>
                 </div>
 
-                <div className="bg-slate-50 dark:bg-slate-850 p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
+                <div className="bg-slate-50 dark:bg-slate-850 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
                   <div className="text-slate-400 text-[10px] uppercase font-extrabold tracking-wider">
                     Active Opportunities
                   </div>
@@ -198,7 +198,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-              className="hidden sm:flex absolute top-6 -left-6 md:-left-10 z-20 w-[190px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg flex-col gap-1.5"
+              className="hidden lg:flex absolute top-6 -left-6 md:-left-10 z-20 w-[190px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg flex-col gap-1.5"
             >
               <div className="flex items-center justify-between">
                 <span className="text-[9px] font-bold uppercase tracking-wider bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded-md border border-blue-100 dark:border-blue-900/30">
@@ -216,7 +216,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-              className="hidden sm:flex absolute -bottom-6 -right-6 z-20 w-[180px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg items-center gap-2.5"
+              className="hidden lg:flex absolute -bottom-6 -right-6 z-20 w-[180px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg items-center gap-2.5"
             >
               <div className="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shrink-0">
                 <CalendarCheck2 className="w-4 h-4" />
