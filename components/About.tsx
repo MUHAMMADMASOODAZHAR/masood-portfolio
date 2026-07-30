@@ -132,20 +132,25 @@ export default function About() {
           {/* Order 5 on mobile, spans all 5 columns on desktop (Row 3) */}
           <div className="lg:col-span-5 lg:col-start-1 lg:row-start-3 order-5 w-full bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-5 lg:py-5 lg:px-6 shadow-xs flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 mt-6">
             
-            {/* Left Portion: Metrics (approx 58%) */}
-            <div className="w-full lg:w-[58%] grid grid-cols-3 gap-3 md:gap-4 items-center">
-              {stats.map((stat, i) => (
+            {/* Left Portion: Expertise Focus Badges */}
+            <div className="w-full lg:w-[58%] grid grid-cols-2 sm:grid-cols-4 gap-3 items-center">
+              {[
+                "GoHighLevel Systems",
+                "AI Voice & Chat Automation",
+                "N8N & Zapier Integrations",
+                "CRM & Funnel Development",
+              ].map((badge, i) => (
                 <div
                   key={i}
                   className={`flex flex-col items-center lg:items-start text-center lg:text-left ${
-                    i < 2 ? "border-r border-slate-200/60 dark:border-slate-800/60 pr-3 lg:pr-4" : ""
+                    i < 3 ? "sm:border-r border-slate-200/60 dark:border-slate-800/60 sm:pr-3" : ""
                   }`}
                 >
-                  <span className="text-[26px] sm:text-[30px] lg:text-[28px] xl:text-[32px] font-bold text-slate-950 dark:text-white leading-tight">
-                    {stat.value}
+                  <span className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-white leading-tight">
+                    {badge}
                   </span>
-                  <span className="text-[13px] sm:text-[14px] lg:text-[13px] text-slate-600 dark:text-slate-400 font-medium mt-0.5 leading-tight">
-                    {stat.label}
+                  <span className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold mt-0.5 uppercase tracking-wider">
+                    Core Specialization
                   </span>
                 </div>
               ))}

@@ -93,11 +93,9 @@ export default function Hero() {
             {/* Supporting Paragraph */}
             <motion.p
               variants={itemVariants}
-              className="text-base lg:text-[17px] text-slate-650 dark:text-slate-350 max-w-[620px] w-full leading-[1.65] font-normal"
+              className="text-base md:text-[17px] lg:text-[18px] text-slate-600 dark:text-slate-300 max-w-[620px] w-full leading-[1.65] font-normal"
             >
-              I build custom systems for service businesses: automating lead capturing pipelines, 
-              qualifying prospects with conversational AI text/voice agents, and running closed-loop Meta 
-              and Google Ads to scale booked sales meetings.
+              I build connected GoHighLevel, AI-agent and advertising systems that capture leads, automate follow-up and turn more opportunities into booked appointments.
             </motion.p>
 
             {/* CTA Buttons */}

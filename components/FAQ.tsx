@@ -16,31 +16,35 @@ export default function FAQ() {
   const faqs: FAQItem[] = [
     {
       question: "What does a typical project cost?",
-      answer: "A standard GoHighLevel CRM setup or speed-to-lead workflow starts at $1,500. Complex integrations featuring custom API middleware or ad Conversion API feedback loops range between $2,500 and $5,000. Custom outbound conversational AI voice integrations are quoted dynamically based on script complexity.",
+      answer: "A standard GoHighLevel CRM setup or speed-to-lead workflow typically ranges between $1,500 and $2,500. Complex implementations involving custom API middleware, AI voice/chat agents, or ad Conversions API feedback loops range from $2,500 to $5,000+ depending on exact scope.",
     },
     {
       question: "How long does implementation take?",
-      answer: "A standard GoHighLevel setup takes approximately 2 weeks. Custom integrations, conversions API feeds, or conversational AI agent models take 3 to 4 weeks. Your team simply needs to provide brand assets, software API keys, and scope outlines during our setup phase.",
+      answer: "A standard GoHighLevel setup takes approximately 1 to 2 weeks. Custom integrations, Conversions API feeds, or conversational AI agent models take 2 to 4 weeks depending on the complexity of your sales workflows.",
     },
     {
       question: "Can you fix an existing GoHighLevel setup?",
-      answer: "Yes. I audit broken pipelines, malfunctioning trigger loops, or database schema configuration errors. I rebuild the underlying structures, test custom field parameters, and re-connect clean integrations to restore stable operations.",
+      answer: "Yes. I audit malfunctioning workflows, broken pipeline triggers, or disorganized contact databases. I clean up custom field schemas, repair trigger loops, and re-connect integrations for smooth operations.",
     },
     {
       question: "Can you build AI voice and chat agents?",
-      answer: "Yes. I construct custom OpenAI API conversational prompt architectures connected to SMS, web chat, or phone dialer API endpoints. The AI qualified leads, answers company FAQs, queries real-time calendar availability, and registers bookings.",
+      answer: "Yes. I build custom conversational AI models (using OpenAI and Vapi) connected to SMS, web chat, or phone lines. The AI qualifies leads, answers business FAQs, queries live calendar availability, and books appointments.",
     },
     {
       question: "Do you provide ongoing support?",
-      answer: "Yes. I offer monthly support retainers to monitor database sync logs, tweak conversational AI prompt sheets, and upgrade automations as your operations scale.",
+      answer: "Yes. I offer monthly optimization retainers to monitor database logs, tweak AI prompt sheets, maintain integrations, and support your team as your lead volume scales.",
     },
     {
-      question: "Will I own the system?",
-      answer: "Yes. 100% of all GoHighLevel sub-accounts, Make/Zapier automation blueprints, OpenAI API endpoints, and prompt documentation belong directly to your business. I do not retain lock-in access.",
+      question: "Will I own the workflows and integrations?",
+      answer: "Yes. 100% of all GoHighLevel sub-accounts, automation blueprints (N8N/Zapier), prompt sheets, and API endpoints belong directly to your business. You retain full ownership.",
     },
     {
-      question: "What is required to start?",
-      answer: "To get started, schedule a strategy call. Once we confirm scope fit, I will send a simple audit document to collect system access keys, brand guidelines, and sales intake scripts.",
+      question: "Can you connect GoHighLevel with custom software?",
+      answer: "Yes. Using webhooks, N8N, Zapier, and custom REST API endpoints, I can connect GoHighLevel with custom databases, internal tools, Asana, Slack, Stripe, or proprietary client portals.",
+    },
+    {
+      question: "What information do you need before starting?",
+      answer: "To start, we begin with a short strategy call. Once scope is defined, I collect admin access to your relevant platforms (GHL, domain DNS, ad accounts, API keys) and an outline of your current sales intake steps.",
     },
   ];
 
@@ -50,39 +54,38 @@ export default function FAQ() {
         
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-sm font-semibold tracking-wider text-blue-600 dark:text-blue-400 uppercase">
+          <h2 className="text-xs sm:text-sm font-semibold tracking-wider text-blue-600 dark:text-blue-400 uppercase">
             FAQ
           </h2>
-          <p className="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <p className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Frequently Asked Questions
           </p>
-          <p className="mt-4 text-base sm:text-lg text-slate-700 dark:text-slate-200">
-            Everything you need to know about GoHighLevel configurations, 
-            pricing, support, and AI agent integrations.
+          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Clear answers regarding project scope, pricing, timelines, AI integrations, and ongoing support.
           </p>
         </div>
 
         {/* Accordions */}
-        <div className="space-y-4">
+        <div className="space-y-3.5">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div
                 key={idx}
-                className="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50 dark:bg-slate-900 transition-colors duration-300"
+                className="border border-slate-200/80 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/80 dark:bg-slate-900 transition-colors duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-content-${idx}`}
                   id={`faq-btn-${idx}`}
-                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-650 hover:bg-slate-100/50 dark:hover:bg-slate-800/40 transition-colors duration-300 cursor-pointer"
+                  className="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 hover:bg-slate-100/50 dark:hover:bg-slate-800/40 transition-colors duration-200 cursor-pointer"
                 >
-                  <span className="font-bold text-slate-900 dark:text-white text-[15px] sm:text-base leading-snug pr-4">
+                  <span className="font-bold text-slate-900 dark:text-white text-base md:text-[17px] leading-snug pr-4">
                     {faq.question}
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shrink-0 border border-slate-200/60 dark:border-slate-700/60 text-slate-600 dark:text-slate-400">
-                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  <div className="w-7 h-7 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">
+                    {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
                   </div>
                 </button>
 
@@ -97,7 +100,7 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                     >
-                      <div className="p-6 pt-0 border-t border-slate-100 dark:border-slate-800/60 text-base text-slate-700 dark:text-slate-200 leading-relaxed font-semibold">
+                      <div className="p-5 md:p-6 pt-0 border-t border-slate-100 dark:border-slate-800/60 text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                         {faq.answer}
                       </div>
                     </motion.div>

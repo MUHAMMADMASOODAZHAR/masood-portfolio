@@ -5,8 +5,7 @@ import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import Process from "@/components/Process";
-import Benefits from "@/components/Benefits";
-import Features from "@/components/Features";
+import Reliability from "@/components/Reliability";
 import Tools from "@/components/Tools";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -23,8 +22,7 @@ export default function Home() {
       <Portfolio />
       <Testimonials />
       <Process />
-      <Benefits />
-      <Features />
+      <Reliability />
       <Tools />
       <FAQ />
       <Contact />
