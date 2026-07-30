@@ -134,98 +134,101 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[450px] flex items-center justify-center lg:justify-end overflow-hidden px-4 sm:px-0"
+            className="lg:col-span-5 flex items-center justify-center lg:justify-end py-6 lg:py-8"
           >
-            <motion.div 
-              animate={{ y: [0, -5, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="w-full max-w-[400px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-[0_15px_40px_rgba(148,163,184,0.12)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.35)] p-4 sm:p-6 relative z-10"
-            >
-              {/* OSX-style Top Bar controls */}
-              <div className="flex gap-1.5 mb-5 items-center">
-                <span className="w-2 h-2 rounded-full bg-rose-400 block" />
-                <span className="w-2 h-2 rounded-full bg-amber-400 block" />
-                <span className="w-2 h-2 rounded-full bg-emerald-400 block" />
-                <span className="text-[10px] text-slate-400 dark:text-slate-500 font-extrabold ml-auto uppercase tracking-wider">
-                  CRM PIPELINE ENGINE
-                </span>
-              </div>
+            <div className="relative w-full max-w-[400px]">
+              {/* Main CRM Card */}
+              <motion.div 
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-[0_15px_40px_rgba(148,163,184,0.12)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.35)] p-4 sm:p-6 relative z-10"
+              >
+                {/* OSX-style Top Bar controls */}
+                <div className="flex gap-1.5 mb-5 items-center">
+                  <span className="w-2 h-2 rounded-full bg-rose-400 block" />
+                  <span className="w-2 h-2 rounded-full bg-amber-400 block" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 block" />
+                  <span className="text-[10px] text-slate-400 dark:text-slate-500 font-extrabold ml-auto uppercase tracking-wider">
+                    CRM PIPELINE ENGINE
+                  </span>
+                </div>
 
-              {/* Stats overview */}
-              <div className="grid grid-cols-2 gap-3 sm:gap-3.5 mb-5">
-                <div className="bg-slate-50 dark:bg-slate-850 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
-                  <div className="text-slate-400 text-[10px] uppercase font-extrabold tracking-wider">
-                    New Leads
+                {/* Stats overview */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-3.5 mb-5">
+                  <div className="bg-slate-50 dark:bg-slate-850 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
+                    <div className="text-slate-400 text-[10px] uppercase font-extrabold tracking-wider">
+                      New Leads
+                    </div>
+                    <div className="text-xl font-black text-slate-900 dark:text-white mt-1">482</div>
                   </div>
-                  <div className="text-xl font-black text-slate-900 dark:text-white mt-1">482</div>
-                </div>
 
-                <div className="bg-slate-50 dark:bg-slate-850 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
-                  <div className="text-slate-400 text-[10px] uppercase font-extrabold tracking-wider">
-                    Active Opportunities
+                  <div className="bg-slate-50 dark:bg-slate-850 p-3 sm:p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80">
+                    <div className="text-slate-400 text-[10px] uppercase font-extrabold tracking-wider">
+                      Active Opportunities
+                    </div>
+                    <div className="text-xl font-black text-slate-900 dark:text-white mt-1">114</div>
                   </div>
-                  <div className="text-xl font-black text-slate-900 dark:text-white mt-1">114</div>
-                </div>
-              </div>
-
-              {/* Active conversion logs preview */}
-              <div className="space-y-2">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2 block">
-                  Conversion Activity
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50/80 dark:bg-slate-850 border border-slate-100/50 dark:border-slate-800/50">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 animate-pulse" />
-                  <div className="flex-grow min-w-0">
-                    <span className="font-bold text-xs text-slate-900 dark:text-white">Appointments Booked</span>
-                    <p className="text-[10px] text-slate-505">AI scheduling flow success</p>
+                {/* Active conversion logs preview */}
+                <div className="space-y-2">
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2 block">
+                    Conversion Activity
                   </div>
-                  <span className="text-[10px] text-slate-400 font-medium">10m ago</span>
-                </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50/80 dark:bg-slate-850 border border-slate-100/50 dark:border-slate-800/50">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                  <div className="flex-grow min-w-0">
-                    <span className="font-bold text-xs text-slate-900 dark:text-white">Follow-Ups Queue</span>
-                    <p className="text-[10px] text-slate-505">SMS trigger sent automatically</p>
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50/80 dark:bg-slate-850 border border-slate-100/50 dark:border-slate-800/50">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 animate-pulse" />
+                    <div className="flex-grow min-w-0">
+                      <span className="font-bold text-xs text-slate-900 dark:text-white">Appointments Booked</span>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400">AI scheduling flow success</p>
+                    </div>
+                    <span className="text-[10px] text-slate-400 font-medium">10m ago</span>
                   </div>
-                  <span className="text-[10px] text-slate-400 font-medium">35m ago</span>
+
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50/80 dark:bg-slate-850 border border-slate-100/50 dark:border-slate-800/50">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                    <div className="flex-grow min-w-0">
+                      <span className="font-bold text-xs text-slate-900 dark:text-white">Follow-Ups Queue</span>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400">SMS trigger sent automatically</p>
+                    </div>
+                    <span className="text-[10px] text-slate-400 font-medium">35m ago</span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Floating Element 1: Active Lead Card */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-              className="hidden lg:flex absolute top-6 -left-6 md:-left-10 z-20 w-[190px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg flex-col gap-1.5"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-[9px] font-bold uppercase tracking-wider bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded-md border border-blue-100 dark:border-blue-900/30">
-                  AI Active
-                </span>
-                <Bot className="w-3.5 h-3.5 text-blue-500" />
-              </div>
-              <div>
-                <h5 className="text-xs font-bold text-slate-900 dark:text-white leading-tight">James Carter</h5>
-                <p className="text-[9px] text-slate-505 mt-0.5 leading-snug">AI voice pipeline qualifying...</p>
-              </div>
-            </motion.div>
+              {/* Floating Element 1: Active Lead Card */}
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                className="hidden lg:flex absolute -top-5 -left-10 z-20 w-[190px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3.5 rounded-xl shadow-lg flex-col gap-1.5"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[9px] font-bold uppercase tracking-wider bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded-md border border-blue-100 dark:border-blue-900/30">
+                    AI Active
+                  </span>
+                  <Bot className="w-3.5 h-3.5 text-blue-500" />
+                </div>
+                <div>
+                  <h5 className="text-xs font-bold text-slate-900 dark:text-white leading-tight">James Carter</h5>
+                  <p className="text-[9px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug">AI voice pipeline qualifying...</p>
+                </div>
+              </motion.div>
 
-            {/* Floating Element 2: Appointment Status Progress */}
-            <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-              className="hidden lg:flex absolute -bottom-6 -right-6 z-20 w-[180px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-lg items-center gap-2.5"
-            >
-              <div className="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shrink-0">
-                <CalendarCheck2 className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Calls Booked</div>
-                <div className="text-sm font-black text-slate-900 dark:text-white mt-0.5">14 Today</div>
-              </div>
-            </motion.div>
+              {/* Floating Element 2: Appointment Status Progress */}
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                className="hidden lg:flex absolute -bottom-5 -right-6 z-20 w-[180px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3.5 rounded-xl shadow-lg items-center gap-2.5"
+              >
+                <div className="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shrink-0">
+                  <CalendarCheck2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Calls Booked</div>
+                  <div className="text-sm font-black text-slate-900 dark:text-white mt-0.5">14 Today</div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
 
         </div>

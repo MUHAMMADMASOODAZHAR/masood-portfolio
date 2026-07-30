@@ -120,7 +120,7 @@ export default function About() {
                       {cred.title}
                     </h4>
                   </div>
-                  <p className="text-[12px] sm:text-[13px] text-slate-505 dark:text-slate-400 leading-relaxed flex-grow font-medium">
+                  <p className="text-[12px] sm:text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed flex-grow font-medium">
                     {cred.desc}
                   </p>
                 </div>
