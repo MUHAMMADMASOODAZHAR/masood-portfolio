@@ -24,7 +24,7 @@ export default function Team() {
       id: "masood-azhar",
       name: "Masood Azhar",
       role: "GoHighLevel & AI Automation Specialist",
-      leadershipBadge: "Founder & Automation Lead",
+      leadershipBadge: "Automation Lead",
       image: "/masood-azhar.jpg",
       altText: "Masood Azhar, GoHighLevel and AI automation specialist",
       bio: "Specializes in GoHighLevel CRM architecture, AI voice and chat agents, N8N middleware integrations, and sales pipeline automation for service businesses.",
