@@ -67,40 +67,41 @@ export default function About() {
             </div>
           </div>
 
-          {/* 2. LEFT COLUMN - PROFESSIONAL PORTRAIT */}
+          {/* 2. LEFT COLUMN - CLEAN PROFESSIONAL PORTRAIT CARD */}
           {/* Order 3 on mobile, Col 1-2 on desktop spanning rows 1 to 2 */}
-          <div className="lg:col-start-1 lg:col-span-2 lg:row-start-1 lg:row-span-2 order-3 w-full flex items-center justify-center lg:pr-4">
-            {/* Portrait Card Container */}
-            <div className="relative w-full max-w-[320px] xs:max-w-[380px] aspect-[4/5] rounded-[20px] overflow-hidden shadow-md border border-slate-200 dark:border-slate-850 group bg-slate-100 dark:bg-slate-900 mx-auto">
+          <div className="lg:col-start-1 lg:col-span-2 lg:row-start-1 lg:row-span-2 order-3 w-full flex flex-col items-center lg:items-start justify-center lg:pr-4">
+            
+            {/* Outer Frame Container */}
+            <div className="relative w-full max-w-[320px] xs:max-w-[360px] mx-auto lg:mx-0">
               
-              {/* Main Portrait Image */}
-              <Image
-                src="/masood-azhar.jpg"
-                alt="Masood Azhar, GoHighLevel and AI automation specialist"
-                fill
-                priority
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              />
+              {/* Subtle Decorative Accent Backdrop */}
+              <div className="absolute -inset-1.5 rounded-[24px] bg-gradient-to-tr from-blue-500/10 via-blue-500/5 to-transparent blur-xs pointer-events-none" />
 
-              {/* Floating Credential Badge Upper-Right */}
-              <div className="absolute top-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-100 dark:border-slate-800 px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-20">
-                <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                <span className="text-[10px] font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">
-                  GHL & AI Specialist
-                </span>
+              {/* Clean Portrait Frame */}
+              <div className="relative w-full aspect-[4/5] rounded-[20px] overflow-hidden shadow-md border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900">
+                <Image
+                  src="/masood-azhar.jpg"
+                  alt="Masood Azhar, GoHighLevel and AI automation specialist"
+                  fill
+                  priority
+                  className="object-cover"
+                />
               </div>
-
-              {/* Translucent bottom overlay panel */}
-              <div className="absolute bottom-4 inset-x-4 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border border-white/20 dark:border-slate-800 p-4 rounded-[14px] shadow-sm z-10 text-left">
-                <div className="font-bold text-slate-950 dark:text-white text-base">
-                  Masood Azhar
-                </div>
-                <div className="text-[11px] text-blue-650 dark:text-blue-400 font-extrabold uppercase tracking-wide mt-0.5">
-                  GoHighLevel & AI Automation Architect
-                </div>
-              </div>
-
             </div>
+
+            {/* Clean Identity Block Below Portrait */}
+            <div className="mt-4 text-center lg:text-left space-y-1 w-full max-w-[320px] xs:max-w-[360px] mx-auto lg:mx-0">
+              <h3 className="text-[20px] md:text-[22px] font-bold text-slate-950 dark:text-white leading-tight font-heading">
+                Masood Azhar
+              </h3>
+              <p className="text-sm sm:text-[15px] font-normal text-slate-600 dark:text-slate-400">
+                GoHighLevel & AI Automation Specialist
+              </p>
+              <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 pt-0.5 block">
+                GoHighLevel • AI Agents • Workflow Automation
+              </span>
+            </div>
+
           </div>
 
           {/* 3. CREDENTIAL CARDS (2x2 Grid) */}
