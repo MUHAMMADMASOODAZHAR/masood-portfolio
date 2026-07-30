@@ -11,6 +11,7 @@ interface TeamMember {
   role: string;
   leadershipBadge?: string;
   image: string;
+  altText: string;
   bio: string;
   expertise: string[];
   linkedin?: string;
@@ -25,6 +26,7 @@ export default function Team() {
       role: "GoHighLevel & AI Automation Specialist",
       leadershipBadge: "Founder & Automation Lead",
       image: "/masood-azhar.jpg",
+      altText: "Masood Azhar, GoHighLevel and AI automation specialist",
       bio: "Specializes in GoHighLevel CRM architecture, AI voice and chat agents, N8N middleware integrations, and sales pipeline automation for service businesses.",
       expertise: [
         "GoHighLevel CRM",
@@ -36,17 +38,18 @@ export default function Team() {
       portfolio: "https://upwork.com"
     },
     {
-      id: "systems-engineer",
-      name: "Automation Systems Specialist",
-      role: "Integration & Webhook Engineer",
-      leadershipBadge: "Technical Systems Lead",
-      image: "/masood-azhar.jpg",
-      bio: "Focuses on custom API webhook endpoints, database synchronization, complex N8N workflow logic, and automated team notification channels.",
+      id: "muhammad-zeeshan",
+      name: "Muhammad Zeeshan",
+      role: "Certified GoHighLevel Admin",
+      leadershipBadge: "Certified GHL Admin",
+      image: "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/1cVnHFbr5sfjLiE0SGfB/media/6a58121f514abedffedaff93.png",
+      altText: "Muhammad Zeeshan, Certified GoHighLevel Admin",
+      bio: "Specializes in GoHighLevel CRM administration, account setup, workflow management, custom fields, and lead pipeline optimization.",
       expertise: [
-        "API Webhooks",
-        "Database Sync",
-        "Node.js / Python",
-        "Asana & Slack Sync"
+        "GoHighLevel Admin",
+        "CRM Workflows",
+        "Sub-Accounts",
+        "Pipeline Setup"
       ],
       linkedin: "https://linkedin.com"
     }
@@ -85,7 +88,7 @@ export default function Team() {
                 <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden mb-5 border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-950">
                   <Image
                     src={member.image}
-                    alt={`${member.name}, ${member.role}`}
+                    alt={member.altText}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
                     className="object-cover"
