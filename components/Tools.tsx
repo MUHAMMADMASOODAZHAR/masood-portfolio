@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Layers, Cpu, Globe, MessageSquare, Briefcase, DollarSign, ArrowRight } from "lucide-react";
-import { Button } from "./button";
+import { Layers, Cpu, Globe, MessageSquare, Briefcase, DollarSign } from "lucide-react";
 
 interface ToolTile {
   name: string;
@@ -28,7 +27,7 @@ export default function Tools() {
           name: "GoHighLevel",
           desc: "CRM & funnel engine",
           logoIcon: (
-            <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-label="GoHighLevel Logo">
+            <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-label="GoHighLevel Logo">
               <rect x={3} y={3} width={18} height={18} rx={3} />
               <path d="M21 9H3M21 15H3M12 3v18" />
             </svg>
@@ -90,7 +89,7 @@ export default function Tools() {
           name: "Google Ads",
           desc: "Search intent conversion",
           logoIcon: (
-            <svg className="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-label="Google Ads Logo">
+            <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-label="Google Ads Logo">
               <path d="M12 3l9 16H3L12 3z" />
             </svg>
           ),
@@ -182,16 +181,13 @@ export default function Tools() {
   ];
 
   return (
-    <section
-      id="tools"
-      className="relative py-10 md:py-14 lg:py-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900/40 dark:to-slate-950 transition-colors duration-300"
-    >
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section id="tools" className="py-10 md:py-14 lg:py-16 bg-white dark:bg-slate-950 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 lg:mb-16">
           <h2 className="text-xs sm:text-sm font-semibold tracking-wider text-blue-600 dark:text-blue-400 uppercase">
-            Tools & Integration Stack
+            Technology Stack & Integrations
           </h2>
           <p className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Tools and Platforms Connected Around Your Workflow
@@ -206,14 +202,14 @@ export default function Tools() {
           {categories.map((cat, idx) => (
             <motion.div
               key={cat.id}
-              className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 md:p-8 rounded-2xl shadow-xs flex flex-col justify-between"
+              className="bg-slate-50/80 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 md:p-8 rounded-2xl shadow-xs flex flex-col justify-between"
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
             >
               {/* Category Header */}
-              <div className="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-2.5 mb-5 pb-3 border-b border-slate-200/60 dark:border-slate-800/80">
                 <span className="p-1 rounded-md bg-blue-50 dark:bg-blue-950/40 shrink-0">
                   {cat.icon}
                 </span>
@@ -227,13 +223,11 @@ export default function Tools() {
                 {cat.tools.map((tool) => (
                   <div
                     key={tool.name}
-                    className="flex items-center gap-3.5 p-3 rounded-xl bg-slate-50/80 dark:bg-slate-850/60 border border-slate-200/40 dark:border-slate-800/40 hover:border-blue-200 dark:hover:border-blue-900/40 transition-colors duration-200"
+                    className="flex items-center gap-3.5 p-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-800 transition-colors duration-200"
                   >
-                    {/* Logo wrapper */}
-                    <div className="w-10 h-10 rounded-lg bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200/60 dark:border-slate-800 shrink-0 shadow-xs">
+                    <div className="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900 flex items-center justify-center border border-slate-200/80 dark:border-slate-800 shrink-0">
                       {tool.logoIcon}
                     </div>
-                    {/* Labels */}
                     <div className="min-w-0">
                       <h4 className="text-sm font-bold text-slate-900 dark:text-white truncate">
                         {tool.name}
@@ -247,21 +241,6 @@ export default function Tools() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Section Bottom Link CTA */}
-        <div className="text-center mt-10 pt-2">
-          <Button
-            onClick={() => {
-              const element = document.getElementById("contact");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-            variant="link"
-            className="cursor-pointer inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            <span>Need a custom integration? Discuss Your Workflow</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Button>
         </div>
 
       </div>

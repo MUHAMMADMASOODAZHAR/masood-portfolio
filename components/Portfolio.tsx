@@ -13,13 +13,13 @@ interface CaseStudy {
   result: string;
   tools: string[];
   gradient: string;
-  screenshotLabel: string;
+  actionText: string;
 }
 
 export default function Portfolio() {
   const caseStudies: CaseStudy[] = [
     {
-      title: "GoHighLevel CRM and Lead Follow-Up Automation",
+      title: "GoHighLevel CRM and Automated Lead Follow-Up System",
       category: "CRM & Workflow Optimization",
       icon: <Layers className="w-5 h-5 text-white" />,
       problem: "Incoming leads from web forms and ads were managed manually across spreadsheets, causing slow response times and missed callbacks.",
@@ -31,10 +31,10 @@ export default function Portfolio() {
       tools: ["GoHighLevel CRM", "Twilio SMS", "Mailgun"],
       result: "Centralized lead management with initial outreach automated to respond instantly upon lead submission.",
       gradient: "from-blue-600 to-indigo-700",
-      screenshotLabel: "GHL Pipeline Dashboard",
+      actionText: "View GoHighLevel CRM Case Study",
     },
     {
-      title: "AI Voice and Chat Appointment-Booking System",
+      title: "AI Voice and Chat Appointment-Booking Workflow",
       category: "Conversational AI Integration",
       icon: <Bot className="w-5 h-5 text-white" />,
       problem: "Staff receptionists were overwhelmed by repetitive phone inquiries and unable to qualify leads or book appointments after hours.",
@@ -45,8 +45,8 @@ export default function Portfolio() {
       ],
       tools: ["OpenAI API", "Vapi AI Voice", "Make.com", "Calendly"],
       result: "Automated 24/7 lead screening and calendar slot booking directly into client calendars.",
-      gradient: "from-violet-600 to-indigo-800",
-      screenshotLabel: "Conversational AI Logs",
+      gradient: "from-blue-700 to-violet-800",
+      actionText: "Explore AI Voice Agent Systems",
     },
     {
       title: "GoHighLevel and Asana Integration Using N8N",
@@ -60,8 +60,8 @@ export default function Portfolio() {
       ],
       tools: ["N8N Automation", "GoHighLevel API", "Asana API"],
       result: "Seamless operational handoff with project workspace generation completely automated upon deal closure.",
-      gradient: "from-blue-700 to-slate-900",
-      screenshotLabel: "N8N Webhook Workflow",
+      gradient: "from-slate-800 to-blue-900",
+      actionText: "Review Workflow Integration Services",
     },
   ];
 
@@ -116,15 +116,15 @@ export default function Portfolio() {
                   {/* Problem */}
                   <div>
                     <h4 className="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-1">Problem</h4>
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-650 dark:text-slate-300 leading-relaxed font-normal">
                       {study.problem}
                     </p>
                   </div>
 
-                  {/* Solution */}
+                  {/* What Was Built */}
                   <div>
-                    <h4 className="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-1.5">Solution</h4>
-                    <ul className="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-none pl-0">
+                    <h4 className="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-1.5">What Was Built</h4>
+                    <ul className="space-y-1.5 text-xs sm:text-sm text-slate-650 dark:text-slate-300 list-none pl-0">
                       {study.solutionBullets.map((bullet, bIdx) => (
                         <li key={bIdx} className="flex items-start gap-1.5">
                           <span className="text-blue-500 mt-1 shrink-0">•</span>
@@ -136,7 +136,7 @@ export default function Portfolio() {
 
                   {/* Result */}
                   <div className="pt-2 border-t border-slate-100 dark:border-slate-800/80">
-                    <h4 className="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-1">Result</h4>
+                    <h4 className="text-[11px] uppercase font-bold text-slate-400 tracking-wider mb-1">Verified Result</h4>
                     <p className="text-xs sm:text-sm text-slate-900 dark:text-white leading-relaxed font-semibold">
                       {study.result}
                     </p>
@@ -158,7 +158,7 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Action Button */}
+              {/* Action Link */}
               <div className="px-6 pb-6 pt-0 text-left">
                 <Button
                   onClick={() => {
@@ -168,7 +168,7 @@ export default function Portfolio() {
                   variant="link"
                   className="cursor-pointer inline-flex items-center gap-1.5 p-0 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline"
                 >
-                  <span>View Full Case Study</span>
+                  <span>{study.actionText}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Button>
               </div>

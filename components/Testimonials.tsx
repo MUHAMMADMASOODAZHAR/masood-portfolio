@@ -38,10 +38,10 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 lg:mb-16">
           <h2 className="text-xs sm:text-sm font-semibold tracking-wider text-blue-600 dark:text-blue-400 uppercase">
-            Client Reviews
+            Client Feedback & Proof
           </h2>
           <p className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Verified Feedback & Operational Outcomes
+            Verified Feedback and Operational Outcomes
           </p>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
             Reviews from business operators verifying completed CRM automation 
@@ -54,7 +54,7 @@ export default function Testimonials() {
           {reviews.map((review, idx) => (
             <motion.div
               key={idx}
-              className="bg-slate-50/80 dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:shadow-md transition-shadow duration-300 min-h-[320px]"
+              className="bg-slate-50/80 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:shadow-md transition-all duration-300 min-h-[320px]"
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -67,35 +67,35 @@ export default function Testimonials() {
                     {review.source}
                   </span>
                   
-                  <div className="flex gap-0.5">
+                  <div className="flex gap-0.5" aria-label={`Rating: ${review.rating} out of 5 stars`}>
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
                 </div>
 
-                {/* Review Text: 16px font size */}
+                {/* 16px Review Text */}
                 <div className="relative">
-                  <MessageSquare className="w-8 h-8 text-blue-500/10 absolute -top-3 -left-3 pointer-events-none" />
+                  <MessageSquare className="w-8 h-8 text-blue-500/10 dark:text-blue-400/10 absolute -top-3 -left-3 pointer-events-none" />
                   <p className="text-base text-slate-700 dark:text-slate-200 leading-relaxed relative z-10 font-normal italic">
                     &ldquo;{review.content}&rdquo;
                   </p>
                 </div>
               </div>
 
-              {/* Client Profile Info Card */}
+              {/* Client Metadata */}
               <div className="border-t border-slate-200/60 dark:border-slate-800/80 pt-5 mt-6">
                 <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">
                   Integration Completed
                 </div>
-                <div className="text-xs text-slate-800 dark:text-slate-200 font-bold mb-3 leading-snug">
+                <div className="text-xs text-slate-900 dark:text-white font-bold mb-3 leading-snug">
                   {review.service}
                 </div>
                 
                 <div>
-                  <h4 className="text-sm md:text-[15px] font-bold text-slate-900 dark:text-white">
+                  <h3 className="text-sm font-bold text-slate-950 dark:text-white">
                     Client: {review.initials}
-                  </h4>
+                  </h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
                     {review.industry}
                   </p>

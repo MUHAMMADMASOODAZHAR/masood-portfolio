@@ -17,54 +17,54 @@ export default function Services() {
     {
       icon: <Database className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
       title: "GoHighLevel CRM Systems",
-      summary: "End-to-end CRM setup that consolidates leads, automates instant speed-to-lead follow-up, and organizes pipeline tracking.",
+      summary: "Custom CRM setup that consolidates leads, automates instant follow-up, and organizes pipeline stages.",
       bullets: [
-        "Automated 2-minute SMS & email callback sequences",
-        "Custom pipeline stages and visual tracking boards",
-        "Clean contact field schemas, tags, and smart lists",
+        "CRM setup, cleanup, and custom field structures",
+        "Automated speed-to-lead SMS and email sequences",
+        "Custom pipelines, opportunity stages, and smart lists",
         "Calendar booking integration and appointment reminders"
       ],
       tools: ["GoHighLevel", "Twilio", "Mailgun"],
-      actionLabel: "Discuss CRM Setup",
+      actionLabel: "Explore This Service",
     },
     {
       icon: <MessageSquareCode className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
       title: "AI Voice and Chat Agents",
-      summary: "24/7 conversational text and voice agents powered by OpenAI to qualify inbound leads and schedule calendar appointments.",
+      summary: "24/7 conversational voice and chat agents to screen incoming leads, answer FAQs, and book calendar calls.",
       bullets: [
-        "Inbound & outbound AI voice qualification screening",
-        "Real-time calendar slot querying and direct booking",
-        "Custom knowledge base prompt rules and guardrails",
-        "Automated rep handoff alerts upon qualification"
+        "Inbound AI phone call screening and qualification",
+        "Outbound SMS and chat appointment follow-up",
+        "Website chat agents with custom prompt guardrails",
+        "Direct calendar booking and team rep handoffs"
       ],
       tools: ["OpenAI", "Vapi AI Voice", "Make.com"],
-      actionLabel: "Explore AI Agents",
+      actionLabel: "Explore This Service",
     },
     {
       icon: <BarChart3 className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
       title: "Meta and Google Ads",
-      summary: "High-converting paid acquisition campaigns backed by CRM Conversions API tracking to optimize ad budgets for real appointments.",
+      summary: "Targeted lead acquisition campaigns connected with landing pages, CRM pipelines, and conversion tracking.",
       bullets: [
+        "Meta lead generation and Google Search campaigns",
+        "High-converting, mobile-responsive landing pages",
         "Offline Conversions API event feedback loops",
-        "Fast-loading, mobile-responsive landing pages",
-        "Audience exclusion rules and targeted lead funnels",
-        "Lead attribution and cost-per-appointment tracking"
+        "Automated lead nurturing and attribution tracking"
       ],
-      tools: ["Meta Pixel", "Google GTM", "GHL Funnels"],
-      actionLabel: "View Ad Setup",
+      tools: ["Meta Ads", "Google Ads", "GHL Funnels"],
+      actionLabel: "Explore This Service",
     },
     {
       icon: <Puzzle className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
       title: "Integrations and Workflow Automation",
-      summary: "Custom API webhook integrations connecting your CRM, billing, project management, and team communication tools.",
+      summary: "N8N, Zapier, webhook, and custom API connections between GoHighLevel and your team's tools.",
       bullets: [
-        "Custom API webhook middleware pipelines via N8N & Zapier",
-        "Automated Asana task generation upon deal closure",
-        "Real-time Slack notification alerts for sales teams",
-        "Stripe payment billing webhooks & data sync"
+        "N8N workflows and Zapier automation logic",
+        "Webhook endpoints connecting GHL with external platforms",
+        "Automated Asana task generation upon deal win",
+        "Slack alert notifications and Stripe payment sync"
       ],
       tools: ["N8N", "Zapier", "Webhooks", "Node.js"],
-      actionLabel: "Plan Integrations",
+      actionLabel: "Explore This Service",
     },
   ];
 

@@ -55,7 +55,7 @@ export default function About() {
               MEET YOUR AUTOMATION PARTNER
             </span>
             <h2 className="text-3xl md:text-[40px] font-bold text-slate-950 dark:text-white leading-tight max-w-[700px]">
-              The GoHighLevel and Automation Specialist Behind Your Growth System
+              The Specialist Behind Your GoHighLevel and Automation Systems
             </h2>
             <div className="space-y-4 text-slate-650 dark:text-slate-350 font-normal text-base lg:text-[17px] leading-[1.7] mt-6">
               <p>
@@ -76,7 +76,7 @@ export default function About() {
               {/* Main Portrait Image */}
               <Image
                 src="/masood-azhar.jpg"
-                alt="Professional Portrait of Masood Azhar"
+                alt="Masood Azhar, GoHighLevel and AI automation specialist"
                 fill
                 priority
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

@@ -72,7 +72,7 @@ export default function Reliability() {
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug">
                   {card.title}
                 </h3>
-                <p className="mt-2.5 text-sm text-slate-600 dark:text-slate-350 leading-relaxed font-normal">
+                <p className="mt-2.5 text-sm md:text-[15px] text-slate-650 dark:text-slate-300 leading-relaxed font-normal">
                   {card.desc}
                 </p>
               </div>
