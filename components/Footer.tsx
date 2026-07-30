@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Logo & Tagline */}
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-2 text-white">
-              <Image src="/logo.png" alt="Masood Azhar Logo" width={48} height={32} className="h-8 w-auto object-contain" />
+              <Image src="/logo.png" alt="Masood Azhar - GoHighLevel & AI Automation Specialist" width={48} height={32} className="h-8 w-auto object-contain" />
               <span className="text-xl font-bold tracking-tight">
                 Masood <span className="text-blue-500">Azhar.</span>
               </span>

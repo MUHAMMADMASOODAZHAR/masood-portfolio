@@ -76,7 +76,7 @@ export default function About() {
               {/* Main Portrait Image */}
               <Image
                 src="/masood-azhar.jpg"
-                alt="Professional Portrait of Masood Azhar"
+                alt="Masood Azhar, GoHighLevel and AI automation specialist"
                 fill
                 priority
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"

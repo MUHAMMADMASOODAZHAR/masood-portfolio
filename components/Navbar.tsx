@@ -69,7 +69,7 @@ export default function Navbar() {
             onClick={(e) => handleAnchorClick(e, "#home")}
             className="flex items-center gap-2 text-slate-950 dark:text-white focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg p-1"
           >
-            <Image src="/logo.png" alt="Masood Azhar Logo" width={48} height={32} className="h-8 w-auto object-contain" />
+            <Image src="/logo.png" alt="Masood Azhar - GoHighLevel & AI Automation Specialist" width={48} height={32} className="h-8 w-auto object-contain" />
             <span className="text-xl font-bold tracking-tight">
               Masood <span className="text-blue-600 dark:text-blue-400">Azhar.</span>
             </span>
