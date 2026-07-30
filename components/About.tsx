@@ -128,36 +128,60 @@ export default function About() {
             </div>
           </div>
 
-          {/* 4. UNIFIED AUTHORITY BAR CARD (METRICS + CTA + PROFILE LINKS) */}
+          {/* 4. UNIFIED AUTHORITY BAR CARD (CORE EXPERTISE + CTA + PROFILE LINKS) */}
           {/* Order 5 on mobile, spans all 5 columns on desktop (Row 3) */}
           <div className="lg:col-span-5 lg:col-start-1 lg:row-start-3 order-5 w-full bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-5 lg:py-5 lg:px-6 shadow-xs flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 mt-6">
             
-            {/* Left Portion: Expertise Focus Badges */}
-            <div className="w-full lg:w-[58%] grid grid-cols-2 sm:grid-cols-4 gap-3 items-center">
-              {[
-                "GoHighLevel Systems",
-                "AI Voice & Chat Automation",
-                "N8N & Zapier Integrations",
-                "CRM & Funnel Development",
-              ].map((badge, i) => (
-                <div
-                  key={i}
-                  className={`flex flex-col items-center lg:items-start text-center lg:text-left ${
-                    i < 3 ? "sm:border-r border-slate-200/60 dark:border-slate-800/60 sm:pr-3" : ""
-                  }`}
-                >
-                  <span className="text-xs sm:text-[13px] font-bold text-slate-900 dark:text-white leading-tight">
-                    {badge}
-                  </span>
-                  <span className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold mt-0.5 uppercase tracking-wider">
-                    Core Specialization
-                  </span>
-                </div>
-              ))}
+            {/* Left Portion: Core Expertise (approx 65%) */}
+            <div className="w-full lg:w-[65%] text-left">
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-blue-600 dark:text-blue-400 block mb-2.5 text-center lg:text-left">
+                CORE EXPERTISE
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4 items-center">
+                {[
+                  {
+                    icon: <Layers className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />,
+                    title: "GoHighLevel Systems",
+                    sub: "CRM, pipelines, automations",
+                  },
+                  {
+                    icon: <Bot className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />,
+                    title: "AI Voice & Chat",
+                    sub: "Lead qualification and follow-up",
+                  },
+                  {
+                    icon: <Workflow className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />,
+                    title: "N8N & Zapier",
+                    sub: "Integrations and workflow logic",
+                  },
+                  {
+                    icon: <Megaphone className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />,
+                    title: "CRM & Funnels",
+                    sub: "Lead capture and conversion systems",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className={`flex flex-col items-center lg:items-start text-center lg:text-left ${
+                      i < 3 ? "lg:border-r border-slate-200/60 dark:border-slate-800/60 lg:pr-3" : ""
+                    }`}
+                  >
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      {item.icon}
+                      <span className="text-xs sm:text-[13px] font-bold text-slate-950 dark:text-white leading-tight">
+                        {item.title}
+                      </span>
+                    </div>
+                    <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-normal leading-tight">
+                      {item.sub}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Right Portion: CTA & Social Profile Links (approx 42%) */}
-            <div className="w-full lg:w-[42%] flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-6">
+            {/* Right Portion: CTA & Social Profile Links (approx 35%) */}
+            <div className="w-full lg:w-[35%] flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-5">
               
               {/* Primary Call Action Button */}
               <Button
@@ -167,13 +191,13 @@ export default function About() {
                 }}
                 variant="default"
                 size="default"
-                className="w-full sm:w-auto h-[46px] sm:h-[48px] rounded-[10px] px-5 font-semibold cursor-pointer shadow-sm text-sm"
+                className="w-full sm:w-auto h-[46px] sm:h-[48px] rounded-[10px] px-5 font-semibold cursor-pointer shadow-sm text-sm shrink-0"
               >
                 Book a Free Strategy Call
               </Button>
 
-              {/* Elegant profile links */}
-              <div className="flex items-center gap-5 shrink-0 text-sm font-semibold">
+              {/* Profile links */}
+              <div className="flex items-center gap-4 shrink-0 text-sm font-semibold">
                 <a
                   href="https://linkedin.com"
                   target="_blank"
