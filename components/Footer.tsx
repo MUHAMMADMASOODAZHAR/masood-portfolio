@@ -56,8 +56,8 @@ export default function Footer() {
             {/* Email Contact */}
             <div className="text-sm pt-2">
               <span className="text-slate-500 font-bold block uppercase text-[10px] tracking-wider">Business Email</span>
-              <a href="mailto:masood@example.com" className="text-slate-350 hover:text-white font-bold hover:underline">
-                masood@example.com
+              <a href="mailto:masood.786tmp@gmail.com" className="text-slate-350 hover:text-white font-bold hover:underline">
+                masood.786tmp@gmail.com
               </a>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://calendly.com"
+                  href="https://calendly.com/masood-786tmp/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-white hover:underline transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md"

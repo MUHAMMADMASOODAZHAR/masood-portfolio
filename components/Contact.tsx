@@ -92,8 +92,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Email Direct</div>
-                    <a href="mailto:masood@example.com" className="text-sm font-bold text-slate-900 dark:text-white hover:underline focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md">
-                      masood@example.com
+                    <a href="mailto:masood.786tmp@gmail.com" className="text-sm font-bold text-slate-900 dark:text-white hover:underline focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md">
+                      masood.786tmp@gmail.com
                     </a>
                   </div>
                 </div>
@@ -104,8 +104,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Direct Booking Calendar</div>
-                    <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-slate-900 dark:text-white hover:underline focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md">
-                      calendly.com/masood-azhar
+                    <a href="https://calendly.com/masood-786tmp/30min" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-slate-900 dark:text-white hover:underline focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md">
+                      calendly.com/masood-786tmp/30min
                     </a>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function Contact() {
                       required
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      placeholder="masood@example.com"
+                      placeholder="you@company.com"
                       className={`w-full bg-slate-50 dark:bg-slate-850 border ${
                         emailError ? "border-rose-500 focus:border-rose-500" : "border-slate-200 dark:border-slate-700/80 focus:border-blue-500"
                       } px-4 py-3 rounded-xl text-sm focus:outline-none text-slate-950 dark:text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-600`}
@@ -311,7 +311,7 @@ export default function Contact() {
                 {/* Alternative Direct Booking */}
                 <div className="text-center pt-2 flex justify-center">
                   <a 
-                    href="https://calendly.com" 
+                    href="https://calendly.com/masood-786tmp/30min" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={cn(buttonVariants({ variant: "link" }), "text-xs cursor-pointer inline-flex flex-wrap items-center justify-center gap-1.5 whitespace-normal text-center max-w-full px-4")}
