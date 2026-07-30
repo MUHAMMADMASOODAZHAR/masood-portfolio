@@ -14,75 +14,29 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://masoodazhar.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "GoHighLevel Expert & AI Automation Specialist | Masood Azhar",
-  description: "GoHighLevel expert helping service businesses build CRM systems, AI voice and chat agents, automated follow-up, funnels, advertising workflows, and N8N or Zapier integrations.",
-  applicationName: "Masood Azhar Portfolio",
+  title: "Masood Azhar | GoHighLevel, AI Automation & CRM Systems Expert",
+  description: "Architect of business automation engines. Deploying custom CRM systems, conversational AI agents, and paid ad funnels that turn leads into booked calls.",
+  keywords: [
+    "Masood Azhar",
+    "GoHighLevel Expert",
+    "AI Automation Consultant",
+    "CRM System Integrator",
+    "Conversational AI Voice Agents",
+    "Meta Ads Lead Generation",
+    "Google Ads Optimization",
+    "Make.com Zapier Integrations"
+  ],
   authors: [{ name: "Masood Azhar" }],
   creator: "Masood Azhar",
-  publisher: "Masood Azhar",
-  keywords: [
-    "GoHighLevel Expert",
-    "GoHighLevel Automation Specialist",
-    "GoHighLevel CRM Setup",
-    "GoHighLevel Workflow Automation",
-    "AI Voice Agents",
-    "AI Chat Agents",
-    "CRM Automation",
-    "Marketing Automation",
-    "N8N Integrations",
-    "Zapier Integrations",
-    "GoHighLevel Funnels",
-    "GoHighLevel Pipelines",
-    "Lead Follow-Up Automation",
-    "Appointment-Booking Automation",
-    "Meta Ads Automation",
-    "Google Ads Lead Generation",
-    "API and Webhook Integrations",
-    "CRM Systems for Service Businesses",
-  ],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
-    title: "GoHighLevel, AI Agents & Automation Systems | Masood Azhar",
-    description: "CRM, AI-agent, advertising, and workflow automation systems designed to capture leads, automate follow-up, and book more appointments.",
-    url: siteUrl,
-    siteName: "Masood Azhar Portfolio",
-    images: [
-      {
-        url: "/masood-azhar-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Masood Azhar - GoHighLevel & AI Automation Specialist",
-      },
-    ],
-    locale: "en_US",
+    title: "Masood Azhar | GoHighLevel & AI Automation Expert",
+    description: "Personal portfolio of Masood Azhar. Automated lead intake, CRM systems, custom AI tools, and paid ads scale.",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "GoHighLevel, AI Agents & Automation Systems | Masood Azhar",
-    description: "CRM, AI-agent, advertising, and workflow automation systems designed to capture leads, automate follow-up, and book more appointments.",
-    images: ["/masood-azhar-og.png"],
+    locale: "en_US",
   },
   icons: {
     icon: "/logo.png",
-    apple: "/logo.png",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
@@ -99,23 +53,17 @@ export default function RootLayout({
   // Structured Data (JSON-LD)
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "Person"],
+    "@type": "ProfilePage",
     "name": "Masood Azhar",
-    "jobTitle": "GoHighLevel & AI Automation Specialist",
-    "url": siteUrl,
-    "image": `${siteUrl}/masood-azhar.jpg`,
-    "sameAs": [
-      "https://linkedin.com",
-      "https://upwork.com"
-    ],
-    "description": "GoHighLevel expert helping service businesses build CRM systems, AI voice and chat agents, automated follow-up, funnels, advertising workflows, and N8N or Zapier integrations.",
+    "description": "Architect of high-precision business automation engines, specializing in GoHighLevel CRM workflows, custom AI integrations, and paid advertising systems.",
     "knowsAbout": [
       "GoHighLevel CRM Setup",
-      "AI Voice and Chat Agents",
-      "N8N and Zapier Integrations",
+      "Conversational AI Agents",
       "Sales Pipeline Automation",
-      "Meta & Google Ads Lead Generation"
-    ]
+      "Lead Generation Systems",
+      "Paid Marketing Optimization"
+    ],
+    "image": "https://example.com/masood-azhar.jpg"
   };
 
   return (
